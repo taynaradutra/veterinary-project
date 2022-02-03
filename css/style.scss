@@ -1,0 +1,257 @@
+@import "variables";
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+#header {
+  .navbar {
+    background-color: $secondary-color;
+    height: 15vh;
+    z-index: 99999;
+
+    &-brand {
+      padding-bottom: 20px;
+    }
+
+    .nav-link {
+      border-bottom: 2px solid transparent;
+      color: white;
+      font-weight: bold;
+      padding-left: 10px;
+
+      &:hover {
+        color: white;
+        border-bottom: 2px solid white;
+        transform: scale(1.05);
+      }
+    }
+
+    &-collapse {
+      background-color: $primary-color;
+    }
+  }
+}
+
+.form {
+  .input {
+    background-color: $primary-color;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid white;
+    color: white;
+
+    &::placeholder {
+      color: white;
+    }   
+  }
+
+  button {
+    width: 60px;
+  }
+}
+
+#section-one {
+  background-color: $primary-color;
+  padding: 5%;
+
+  .container {
+    height: 100%;
+
+    .row {
+      height: 100%;
+      align-items: center;
+      display: column;
+
+      .description {
+        color: white;
+
+        h1 {
+          font-weight: bold;
+          padding-bottom: 10px;
+          letter-spacing: 2px;
+          line-height: 1.3;
+        }
+
+        p {
+          padding-bottom: 10px;
+          line-height: 1.2;
+        }
+      }
+
+      .img {
+        width: 100%;
+        height: 50%;
+
+        img {
+          max-width: 60%;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}
+
+#section-two,
+#section-four {
+  height: 600px;
+  padding: 0 5% 0 5%;
+
+  .container {
+    height: 100%;
+
+    .row {
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 1rem;
+      justify-content: center;
+
+      .description {
+        color: $dark-color;
+        height: 50%;
+
+        h2 {
+          font-weight: bold;
+          padding-bottom: 10px;
+          letter-spacing: 2px;
+          line-height: 1.3;
+
+          &:nth-child(1) {
+            margin-bottom: -10px;
+          }
+        }
+      }
+
+      .img {
+        height: 50%;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+#section-three,
+#section-five {
+  background-color: $primary-color;
+  padding: 3% 5% 3% 5%;
+
+  color: white;
+  text-align: center;
+
+  .container-title {
+    &__title {
+      font-weight: bolder;
+      padding-bottom: 5px;
+    }
+
+    &__subtitle {
+      padding-bottom: 15px;
+    }
+  }
+
+  .card {
+    background-color: $primary-color;
+    border: none;
+    gap: 5px;
+
+    &-title {
+      font-weight: bolder;
+      font-size: 1.5rem;
+    }
+
+    &-contact {
+      margin-top: 2px;
+      background-color: white;
+      border-radius: 2px;
+      height: 40px;
+    }
+
+    &-icon {
+      padding-right: 5%;
+      color: $third-color;
+      font-size: 1.5rem;
+
+      &:hover {
+        color: $third-color-hover;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+#section-three {
+  .card-img-top:hover {
+    transform: scale(1.03);
+  }
+}
+
+.btn-primary {
+  border: none;
+  background-color: $third-color;
+  height: 40px;
+
+  &:hover {
+    background-color: $third-color-hover;
+    transform: scale(1.05);
+  }
+}
+
+.btn-outline-primary {
+  height: 40px;
+  color: white;
+  border-color: white;
+
+  &:hover {
+    background-color: $third-color-hover;
+    transform: scale(1.05);
+  }
+}
+
+#footer {
+  background-color: $dark-color;
+  color: white;
+
+  .footer-title {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      color: $third-color-hover;
+    }
+  }  
+
+  .footer-item {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+
+    &:hover {
+      color: $third-color-hover;
+    }
+  }
+
+  .footer-contact {
+
+    .footer-icon {
+      color: $third-color;
+      font-size: 1.5rem;
+      padding-left: 10px;
+
+      &:hover {
+        color: $third-color-hover;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+@import "media-query";
